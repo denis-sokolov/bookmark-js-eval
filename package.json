@@ -1,0 +1,27 @@
+{
+  "name": "bookmark-js-eval",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "ci": "npm run verify",
+    "format": "prettier --write 'src/**/*.ts' tsconfig.json",
+    "format-verify": "prettier --list-different 'src/**/*.ts' tsconfig.json",
+    "start": "NODE_ENV=development webpack-dev-server --client-log-level warning",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm run format-verify"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "author": "Denis Sokolov",
+  "dependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "prettier": "^2.0.5",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
